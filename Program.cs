@@ -33,7 +33,8 @@ for (int i = 0; i < array.Length; i ++) // i < size = i < array.Length
     {
         indexMax = array[i];
     }
-}    
+} 
+double difference = Math.Round(indexMax - indexMin, 2);
 Console.WriteLine($"Максимальный элемент массива : {indexMax}");
 Console.WriteLine($"Минимальный элемент массива : {indexMin}");
-Console.WriteLine($"Разница между максимальным и минимальным элементом массива: {indexMax} - {indexMin} = {indexMax - indexMin}");
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива: {indexMax} - {indexMin} = {difference}");
