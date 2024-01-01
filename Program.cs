@@ -8,7 +8,12 @@ double[] GetArray (int size, int minValue, int maxValue)
     double[] resultArray = new double [size];
     for (int i = 0; i < size; i++) // i < size = i < resultArray.Length
     {
-        resultArray[i] = Convert.ToDouble(new Random ().Next(minValue, maxValue + 1))/100;
+        // resultArray[i] = Convert.ToDouble(new Random().Next(minValue, maxValue + 1))/100;
+        // решение Array [0, 10]
+        resultArray[i] = Math.Round((new Random().NextDouble() * new Random().Next( 10, 101)), 2);
+        // умножаю 0,2623438959734608 на рандомное число от 10 до 100 включительно,
+        // далее округляю до 2-х знаков после запятой
+        // решение Array [0, 100]
     }
     return resultArray;
 }
